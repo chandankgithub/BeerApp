@@ -15,7 +15,18 @@ namespace BeerAppDemo.Controllers
         {
             BeerDbContext context = new BeerDbContext();
             var Beers = context.Beers.ToList();
-            return View();
+            return View(Beers);
+        }
+
+        public ActionResult GetNewBeerForm()
+        {
+            return View("NewBeerForm");
+        }
+
+        [HttpPost]
+        public ActionResult Create(FormCollection coll)
+        {
+            return new JsonResult();
         }
 	}
 }

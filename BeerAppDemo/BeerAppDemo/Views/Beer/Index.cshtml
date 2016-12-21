@@ -6,8 +6,47 @@
 
 <h2>Beer List</h2>
 <div class="container">
-    <div class="row">
-       
+@if (Model == null)
+{
+    <div>
+        <h3> No Result Found</h3>
     </div>
+}
+else
+{
+        <div>
+            <table class="table">
+                <caption></caption>
+                <thead>
+
+                <th>Name</th>
+                <th>Color</th>
+                <th>Tasted</th>
+
+
+                </thead>
+                <tbody>
+                    @foreach (var beer in Model)
+                    {
+                        <tr>
+                            <td>@beer.Name</td>
+                            <td>@beer.Color</td>
+                            <td>
+                                <div class="form-inline">
+                                    <input type="checkbox" class="checkbox" @(beer.HasTasted == true ? "checked='checked'" : string.Empty) /> Has Tasted
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    
+                </tbody>
+            </table>
+        </div>
+ 
+}
+    
+</div>
+<div class="container">
+    @Html.ActionLink("Add New", "GetNewBeerForm")
 </div>
 
