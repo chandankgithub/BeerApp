@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "NewBeerForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Beer</h2>
+<hr />
+<form class="form-horizontal">
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="name">Name: </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Name" id="newName" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="color" class="control-label col-sm-2">Color:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Color" id="newColor"  />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="hasTasted" class="control-label col-sm-2">Has Tasted:</label>
+        <div class="col-sm-10">
+            <div class="checkbox">
+                <input type="checkbox" class="checkbox" id="newHasTasted" />
+            </div>
+            
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-2">
+            <button class="btn btn-default" id="newSave">Save</button>
+            <button class="btn btn-default" id="newCancel">Cancel</button>
+        </div>
+      
+    </div>
+    <div>
+        @Html.ActionLink("Back to Listing", "Index")
+    </div>
+</form>
+
+<script src="~/Scripts/Beer/BeerView.js"></script>
+<script src="~/Scripts/Beer/BeerController.js"></script>
+<script src="~/Scripts/Beer/BeerModel.js"></script>

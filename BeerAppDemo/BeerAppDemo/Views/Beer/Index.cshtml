@@ -33,7 +33,7 @@ else
                             <td>@beer.Color</td>
                             <td>
                                 <div class="form-inline">
-                                    <input type="checkbox" class="checkbox" @(beer.HasTasted == true ? "checked='checked'" : string.Empty) /> Has Tasted
+                                    <input id="ckhHasTasted" type="checkbox" class="checkbox" @(beer.HasTasted == true ? "checked='checked'" : string.Empty) /> Has Tasted
                                 </div>
                             </td>
                         </tr>
@@ -47,6 +47,8 @@ else
     
 </div>
 <div class="container">
-    @Html.ActionLink("Add New", "GetNewBeerForm")
+    @Html.ActionLink("Add New", "EditBeer")
 </div>
-
+<script src="~/Scripts/Beer/BeerView.js"></script>
+<script src="~/Scripts/Beer/BeerController.js"></script>
+<script src="~/Scripts/Beer/BeerModel.js"></script>

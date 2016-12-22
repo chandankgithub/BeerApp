@@ -18,9 +18,9 @@ namespace BeerAppDemo.Controllers
             return View(Beers);
         }
 
-        public ActionResult GetNewBeerForm()
+        public ActionResult EditBeer()
         {
-            return View("NewBeerForm");
+            return View();
         }
 
         [HttpPost]
