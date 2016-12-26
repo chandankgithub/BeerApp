@@ -5,7 +5,6 @@
 
     var saveBeer = function (newBeer, successCallback, failureCallback) {
         
-        debugger;
         $.ajax({
             type: "POST",
             url: "/Beer/Update",
@@ -15,6 +14,8 @@
         }).success(successCallback).fail(failureCallback);
         
     }
+
+
     return {
         initialize: init(),
         SaveBeer: function (newBeer, successCallback, failureCallback) {

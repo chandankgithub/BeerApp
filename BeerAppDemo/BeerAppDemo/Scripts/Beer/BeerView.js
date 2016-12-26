@@ -39,7 +39,6 @@
         },
 
         saveNewBeer: function () {
-            debugger;
             var beer = privateMethods.prepareModel();
             privateVariables.controller.SaveBeer(beer, editBeerForm.callbacks.saveBeerSuccessCallback, editBeerForm.callbacks.saveBeerFailureCallback);
         },
@@ -79,7 +78,7 @@
 
         callbacks: {
             saveBeerSuccessCallback: function (result) {
-                alert('New Beer Saved');
+                privateVariables.controller.RedirectTo('beer_home', null, null, null);
             },
             saveBeerFailureCallback: function (error) {
                 //alert('Exception occured: ' + error)

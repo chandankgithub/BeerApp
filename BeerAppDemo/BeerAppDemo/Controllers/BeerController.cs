@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using Beer.Business;
+using System.Web.Helpers;
 namespace BeerAppDemo.Controllers
 {
     public class BeerController : Controller
@@ -27,11 +28,12 @@ namespace BeerAppDemo.Controllers
 
         
         [HttpPost]
-        public ActionResult Update(BeerAppDemo.Models.Beer newBeer)
+        public JsonResult Update(BeerAppDemo.Models.Beer newBeer)
         {
             if (newBeer != null)
             {
-
+                var beer = business.AddBeer(newBeer);
+                return Json(beer);
             }
             return new JsonResult();
         }

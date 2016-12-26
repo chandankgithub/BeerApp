@@ -18,5 +18,14 @@ namespace Beer.Business
             var beers = context.Beers.ToList();
             return beers;
         }
+
+
+        public Models.Beer AddBeer(Models.Beer beer)
+        {
+            BeerDbContext context = new BeerDbContext();
+            context.Beers.Add(beer);
+            context.SaveChanges();
+            return beer;
+        }
     }
 }
