@@ -6,15 +6,19 @@
 
 <h2>Beer List</h2>
 <div class="container" ng-app="app" ng-controller="beerCtrl">
-@if (Model == null)
+@*@if (Model == null)
 {
     <div>
         <h3> No Result Found</h3>
     </div>
 }
 else
-{
-        <div>
+{*@
+    <input type="hidden" ng-model="Beers" />
+    <div ng-hide="Beers" >
+        <h3> No Result Found</h3>
+    </div>
+        <div ng-show="Beers">
             <table class="table">
                 <caption></caption>
                 <thead>
@@ -53,7 +57,7 @@ else
             </table>
         </div>
  
-}
+@*}*@
     
 </div>
 <div class="container">
