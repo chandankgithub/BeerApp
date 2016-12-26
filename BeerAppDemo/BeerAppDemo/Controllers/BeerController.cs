@@ -5,17 +5,19 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using Beer.Business;
 namespace BeerAppDemo.Controllers
 {
     public class BeerController : Controller
     {
+        private BeerBusiness business = new BeerBusiness();
         //
         // GET: /Beer/
         public ActionResult Index()
         {
-            BeerDbContext context = new BeerDbContext();
-            var Beers = context.Beers.ToList();
-            return View(Beers);
+            var beers = business.GetBeers();
+            return View(beers);
+            
         }
 
         public ActionResult EditBeer()
@@ -23,9 +25,14 @@ namespace BeerAppDemo.Controllers
             return View();
         }
 
+        
         [HttpPost]
-        public ActionResult Create(FormCollection coll)
+        public ActionResult Update(BeerAppDemo.Models.Beer newBeer)
         {
+            if (newBeer != null)
+            {
+
+            }
             return new JsonResult();
         }
 	}

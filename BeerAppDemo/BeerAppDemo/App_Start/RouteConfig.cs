@@ -19,6 +19,12 @@ namespace BeerAppDemo
                 defaults: new { controller = "Beer", action = "Index", id = UrlParameter.Optional }
             );
 
+           // routes.MapRoute(
+           //    name: "UpdateBeer",
+           //    url: "Update",
+           //    defaults: new { controller = "Beer", action = "SaveBeer", id = UrlParameter.Optional }
+           //);
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

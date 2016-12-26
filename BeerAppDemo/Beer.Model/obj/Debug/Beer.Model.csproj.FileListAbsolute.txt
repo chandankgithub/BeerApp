@@ -1,0 +1,4 @@
+D:\CK\Projects\BeerApp\BeerAppDemo\Beer.Model\bin\Debug\Beer.Model.dll
+D:\CK\Projects\BeerApp\BeerAppDemo\Beer.Model\bin\Debug\Beer.Model.pdb
+D:\CK\Projects\BeerApp\BeerAppDemo\Beer.Model\obj\Debug\Beer.Model.dll
+D:\CK\Projects\BeerApp\BeerAppDemo\Beer.Model\obj\Debug\Beer.Model.pdb

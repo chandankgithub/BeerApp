@@ -1,0 +1,9 @@
+D:\CK\Projects\BeerApp\BeerAppDemo\Business.DataAccess\bin\Debug\Business.DataAccess.dll
+D:\CK\Projects\BeerApp\BeerAppDemo\Business.DataAccess\bin\Debug\Business.DataAccess.pdb
+D:\CK\Projects\BeerApp\BeerAppDemo\Business.DataAccess\bin\Debug\Beer.Model.dll
+D:\CK\Projects\BeerApp\BeerAppDemo\Business.DataAccess\bin\Debug\EntityFramework.dll
+D:\CK\Projects\BeerApp\BeerAppDemo\Business.DataAccess\bin\Debug\Beer.Model.pdb
+D:\CK\Projects\BeerApp\BeerAppDemo\Business.DataAccess\bin\Debug\EntityFramework.xml
+D:\CK\Projects\BeerApp\BeerAppDemo\Business.DataAccess\obj\Debug\Business.DataAccess.csprojResolveAssemblyReference.cache
+D:\CK\Projects\BeerApp\BeerAppDemo\Business.DataAccess\obj\Debug\Business.DataAccess.dll
+D:\CK\Projects\BeerApp\BeerAppDemo\Business.DataAccess\obj\Debug\Business.DataAccess.pdb

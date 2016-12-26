@@ -1,25 +1,22 @@
-﻿var beerView = function () {
+﻿var beerView = function (ctrl, model) {
+
+    //trigger when page loads
     var init = function () {
         bindEventHandler();
     }
 
-    var editBeerForm = {
-        domElements: {
-            nameInput: $("#newName"),
-            colorInput: $("#newColor"),
-            hasTastedCheckbox: $("#newHasTasted"),
-            saveButton: $("#newSave"),
-            cancelButton: $("#newCancel")
-        },
-
-        eventHandlers: {
-            onSaveButtonClick: function () {
-                privateMethods.getControlValues();
-                return false;
-            }
+    /*Class level private variables*/
+    var privateVariables = {
+        controller: ctrl,
+        model: model,
+        beer: {
+            name: "",
+            color: "",
+            hasTasted:false
         }
-    }
+    };
 
+    /*class level private methods*/
     var privateMethods = {
 
         getInputValue: function (inputElement) {
@@ -33,18 +30,67 @@
                 return $(inputElement).is(':checked');
             }
         },
-        getControlValues: function () {
-            var name = privateMethods.getInputValue(editBeerForm.domElements.nameInput);
-            var color = privateMethods.getInputValue(editBeerForm.domElements.colorInput);
-            var hasTasted = privateMethods.getCheckboxValue(editBeerForm.domElements.hasTastedCheckbox);
-            alert(name + ', ' + color + ', ' + hasTasted);
+
+        prepareModel: function () {
+            privateVariables.beer.name = privateMethods.getInputValue(editBeerForm.domElements.nameInput);
+            privateVariables.beer.color = privateMethods.getInputValue(editBeerForm.domElements.colorInput);
+            privateVariables.beer.hasTasted = privateMethods.getCheckboxValue(editBeerForm.domElements.hasTastedCheckbox);
+            return privateVariables.beer;
+        },
+
+        saveNewBeer: function () {
+            debugger;
+            var beer = privateMethods.prepareModel();
+            privateVariables.controller.SaveBeer(beer, editBeerForm.callbacks.saveBeerSuccessCallback, editBeerForm.callbacks.saveBeerFailureCallback);
+        },
+
+        confirmCancelForm: function () {
+            var confirmOk = confirm('Are you sure you want to cancel the form and go to listing page ?');
+            if (confirmOk) {
+                beerController.GetMyName();
+            }
         }
 
     }
     
+    /*Edit form related changes*/
+    var editBeerForm = {
+
+        formCollection: {},
+
+        domElements: {
+            nameInput: $("#newName"),
+            colorInput: $("#newColor"),
+            hasTastedCheckbox: $("#newHasTasted"),
+            saveButton: $("#newSave"),
+            cancelButton: $("#newCancel")
+        },
+
+        eventHandlers: {
+            onSaveButtonClick: function () {
+                privateMethods.saveNewBeer();
+                return false;
+            },
+            onCancelButtonClick: function () {
+                privateMethods.confirmCancelForm();
+                return false;
+            }
+        },
+
+        callbacks: {
+            saveBeerSuccessCallback: function (result) {
+                alert('New Beer Saved');
+            },
+            saveBeerFailureCallback: function (error) {
+                //alert('Exception occured: ' + error)
+                console.log(error);
+            }
+        }
+    }
    
     var bindEventHandler = function () {
-        editBeerForm.domElements.saveButton.off('click').on('click', editBeerForm.eventHandlers.onSaveButtonClick)
+        editBeerForm.domElements.saveButton.off('click').on('click', editBeerForm.eventHandlers.onSaveButtonClick);
+        editBeerForm.domElements.cancelButton.off('click').on('click', editBeerForm.eventHandlers.onCancelButtonClick);
     }
 
     return {

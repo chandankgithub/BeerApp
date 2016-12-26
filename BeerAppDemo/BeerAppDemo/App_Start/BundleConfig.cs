@@ -23,6 +23,9 @@ namespace BeerAppDemo
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/beermodule").Include(
+                        "~/Scripts/Beer/BeerView.js", "~/Scripts/Beer/BeerController.js", "~/Scripts/Beer/BeerModel.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));

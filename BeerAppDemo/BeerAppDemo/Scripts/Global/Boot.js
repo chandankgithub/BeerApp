@@ -10,10 +10,10 @@ objectFactory.LoadAllDependencies = function (scriptName) {
     $.get(controller, function () {
         beerController();
     })
-    .pipe($.get(view, function () {
-        beerView();
-    }))
     .pipe($.get(model, function () {
         beerModel();
+    }))
+    .pipe($.get(view, function () {
+        beerView(new beerController(new beerModel()));
     }))
 }

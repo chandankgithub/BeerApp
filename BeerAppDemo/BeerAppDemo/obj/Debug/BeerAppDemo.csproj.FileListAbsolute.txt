@@ -50,6 +50,12 @@ D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\bin\Microsoft.Owin.Security.OAuth
 D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\bin\Microsoft.Owin.Security.Google.xml
 D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\bin\Microsoft.Owin.Security.Twitter.xml
 D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\obj\Debug\BeerAppDemo.csprojResolveAssemblyReference.cache
 D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\obj\Debug\BeerAppDemo.dll
 D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\obj\Debug\BeerAppDemo.pdb
+D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\obj\Debug\BeerAppDemo.csprojResolveAssemblyReference.cache
+D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\bin\Beer.Business.dll
+D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\bin\Beer.Model.dll
+D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\bin\Beer.Business.pdb
+D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\bin\Beer.Model.pdb
+D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\bin\Business.DataAccess.dll
+D:\CK\Projects\BeerApp\BeerAppDemo\BeerAppDemo\bin\Business.DataAccess.pdb
