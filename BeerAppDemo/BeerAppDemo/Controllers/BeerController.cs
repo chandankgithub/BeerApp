@@ -21,6 +21,13 @@ namespace BeerAppDemo.Controllers
             
         }
 
+        public ActionResult GetBeers()
+        {
+            var beers = business.GetBeers();
+            return Json(beers, JsonRequestBehavior.AllowGet);
+
+        }
+
         public ActionResult EditBeer()
         {
             return View();

@@ -6,7 +6,8 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    
+
+    <script src="~/Scripts/angular.js"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -43,9 +44,9 @@
     @*<script src="~/Scripts/Global/Boot.js"></script>*@
     @Scripts.Render("~/bundles/global")
     <script type="text/javascript">
-        $(document).ready(function () {
-            objectFactory.LoadAllDependencies('Beer');
-        });
+        //$(document).ready(function () {
+        //    objectFactory.LoadAllDependencies('Beer');
+        //});
     </script>
 </body>
 </html>

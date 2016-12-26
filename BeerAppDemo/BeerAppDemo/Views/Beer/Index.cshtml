@@ -5,7 +5,7 @@
 }
 
 <h2>Beer List</h2>
-<div class="container">
+<div class="container" ng-app="app" ng-controller="beerCtrl">
 @if (Model == null)
 {
     <div>
@@ -26,7 +26,7 @@ else
 
                 </thead>
                 <tbody>
-                    @foreach (var beer in Model)
+                    @*@foreach (var beer in Model)
                     {
                         <tr>
                             <td>@beer.Name</td>
@@ -37,7 +37,17 @@ else
                                 </div>
                             </td>
                         </tr>
-                    }
+                    }*@
+
+                    <tr ng-repeat="beer in Beers">
+                        <td>{{beer.Name}}</td>
+                        <td>{{beer.Color}}</td>
+                        <td>
+                            <div class="form-inline">
+                                <input id="ckhHasTasted" type="checkbox" class="checkbox" ng-model="beer.HasTasted"/> Has Tasted
+                            </div>
+                        </td>
+                    </tr>
                     
                 </tbody>
             </table>
@@ -49,4 +59,5 @@ else
 <div class="container">
     @Html.ActionLink("Add New", "EditBeer")
 </div>
-@Scripts.Render("~/bundles/beermodule")
+@*@Scripts.Render("~/bundles/beermodule")*@
+@Scripts.Render("~/bundles/angularapp")
