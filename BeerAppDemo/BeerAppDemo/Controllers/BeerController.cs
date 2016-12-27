@@ -44,5 +44,16 @@ namespace BeerAppDemo.Controllers
             }
             return new JsonResult();
         }
+
+        [HttpPost]
+        public JsonResult Edit(BeerAppDemo.Models.Beer newBeer)
+        {
+            if (newBeer != null)
+            {
+                var beer = business.AddBeer(newBeer);
+                return Json(beer, JsonRequestBehavior.AllowGet);
+            }
+            return new JsonResult();
+        }
 	}
 }

@@ -51,17 +51,37 @@ else
                                 <input id="ckhHasTasted" type="checkbox" class="checkbox" ng-model="beer.HasTasted"/> Has Tasted
                             </div>
                         </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr ng-if="states.beerForm == true">
+                        <td >
+                            <input type="text" class="form-control" placeholder="Name" ng-model="new.Beer.Name" />
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Color" ng-model="new.Beer.Color" />
+                        </td>
+                        <td>
+                            <div class="checkbox">
+                                <input type="checkbox" ng-model="new.Beer.HasTasted" /> Has Tasted
+                            </div>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" ng-click="insertBeer()">Add</button>
+                            <button type="button" class="btn btn-primary" ng-click="showBeerForm(false)">Cancel</button>
+                        </td>
                     </tr>
                     
                 </tbody>
             </table>
         </div>
- 
+    <div class="container">
+        <button type="button" class="btn btn-primary" ng-click="showBeerForm(true)">Add New</button>
+    </div>
 @*}*@
     
 </div>
-<div class="container">
-    @Html.ActionLink("Add New", "EditBeer")
-</div>
+
 @*@Scripts.Render("~/bundles/beermodule")*@
 @Scripts.Render("~/bundles/angularapp")
